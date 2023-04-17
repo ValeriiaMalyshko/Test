@@ -3,9 +3,9 @@
   grid-template-columns: repeat(1, 1fr);
   row-gap: 40px;
   min-width: 400px;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
 }
 .li {
   list-style: none;
@@ -22,10 +22,10 @@
   line-height: 1.2;
   text-transform: uppercase;
   color: #ebd8ff;
-  /* background-image: url(../images/picture2\ 1.svg); */
-  /* background-size: contain; */
   background-position: top 20px left 20px, top 28px left 36px, top 0px left 0px;
   background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
 .logo {
   display: inline;
@@ -89,8 +89,17 @@
   background: #ebd8ff;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #373737;
+}
+.link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 1.2;
   text-transform: uppercase;
   color: #373737;
@@ -100,11 +109,13 @@
   .ul {
     max-width: 768px;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
   .ul {
     max-width: 1280px;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
   }
 }

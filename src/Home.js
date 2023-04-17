@@ -1,11 +1,14 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import s from "./Home.module.css";
 
 const Home = () => {
   return (
-    <>
-      <h1>Welcome to our social network</h1>
-    </>
+    <div className={s.section}>
+      <h1 className={s.h1}>Welcome to our social network</h1>
+      <a href="tweets" type="button" className={s.link}>
+        Join
+      </a>
+    </div>
   );
 };
 

@@ -1,0 +1,28 @@
+.section {
+  background: no-repeat url(../public/logo.svg),
+    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+  height: 100vh;
+  width: 100vw;
+  background-position: top;
+}
+.h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ebd8ff;
+  padding-top: 500px;
+  margin: 0;
+  margin-bottom: 26px;
+}
+.link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ebd8ff;
+}

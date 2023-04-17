@@ -17,6 +17,11 @@ const UsersList = () => {
 
   return (
     <>
+      <div className={s.link}>
+        <a href="/" type="button">
+          Back
+        </a>
+      </div>
       {data === undefined ? (
         <div>Data is empty</div>
       ) : (
