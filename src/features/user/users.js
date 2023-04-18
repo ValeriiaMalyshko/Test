@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import PropTypes from 'prop-types';
 import User from "./userCard";
 import s from "./userCard.module.css";
-import { useFetchUsersQuery } from "../../app/userSlice";
+import { useFetchUsersQuery } from "../../app/userApi";
 // import { useSelector } from "react-redux";
 
 const UsersList = () => {

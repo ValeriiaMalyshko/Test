@@ -8,10 +8,21 @@ export const userApi = createApi({
   tagTypes: ["Users"],
   endpoints: (builder) => ({
     fetchUsers: builder.query({
-      query: () => "/users",
+      query: () => `/users`,
       providesTags: ["Users"],
+    }),
+    updateUser: builder.mutation({
+      query: ({ id, follow, followers }) => ({
+        url: `/users/${id}`,
+        method: "PUT",
+        body: {
+          follow: follow,
+          followers,
+        },
+      }),
+      invalidatesTags: ["Users"],
     }),
   }),
 });
 
-export const { useFetchUsersQuery } = userApi;
+export const { useFetchUsersQuery, useUpdateUserMutation } = userApi;
