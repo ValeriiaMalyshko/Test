@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import s from "./Home.module.css";
 
 const Home = () => {
   return (
     <div className={s.section}>
       <h1 className={s.h1}>Welcome to our social network</h1>
-      <a href="tweets" type="button" className={s.link}>
+      <Link to="/tweets" className={s.link}>
         Join
-      </a>
+      </Link>
     </div>
   );
 };

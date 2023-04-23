@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-// import PropTypes from 'prop-types';
-import User from "./userCard";
-import s from "./userCard.module.css";
-import { useFetchUsersQuery } from "../../app/userApi";
-// import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import TweetCard from "../../components/tweetCard/TweetCard";
+import s from "./UserList.module.css";
+import { useFetchUsersQuery } from "../../redux/userApi";
 
 const UsersList = () => {
-  const { data } = useFetchUsersQuery();
+  const { data, isLoading } = useFetchUsersQuery();
   console.log(data);
 
   const userPerRow = 12;
@@ -18,17 +17,17 @@ const UsersList = () => {
   return (
     <>
       <div className={s.link}>
-        <a href="/" type="button">
-          Back
-        </a>
+        <Link to="/">Back</Link>
       </div>
-      {data === undefined ? (
-        <div>Data is empty</div>
+      {data?.length === 0 ? (
+        <h2>Data is empty</h2>
+      ) : isLoading ? (
+        <h2>Data is loading</h2>
       ) : (
         <ul className={s.ul}>
           {data?.slice(0, next)?.map((user) => {
             return (
-              <User
+              <TweetCard
                 key={user.id}
                 id={user.id}
                 user={user.user}

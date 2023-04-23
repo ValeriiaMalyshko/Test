@@ -5,22 +5,21 @@ export const userApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://6438214ec1565cdd4d66f128.mockapi.io/",
   }),
-  tagTypes: ["Users"],
+  tagTypes: ["userApi"],
   endpoints: (builder) => ({
     fetchUsers: builder.query({
       query: () => `/users`,
-      providesTags: ["Users"],
+      providesTags: ["userApi"],
     }),
     updateUser: builder.mutation({
-      query: ({ id, follow, followers }) => ({
+      query: ({ id, followers }) => ({
         url: `/users/${id}`,
         method: "PUT",
         body: {
-          follow: follow,
           followers,
         },
       }),
-      invalidatesTags: ["Users"],
+      invalidatesTags: ["userApi"],
     }),
   }),
 });

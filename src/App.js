@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import UsersList from "./features/user/users";
-import Home from "./Home";
+import UsersList from "./pages/tweets/UserList";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
